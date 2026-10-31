@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <form>
-        <p id="question"></p>
-
-    <div id = "choices">
-        <div id = "one">
-        <input type = "radio" name = "choice" id = "a">
-        <label for = "a">a</label>
+    <section class="full-wrap">
+        <h1>Quiz</h1>
+        <div id="welcome">
+            <h2>Welcome to a fun quiz by Gavin and Ann!</h2>
+            <p>Press the button to get started.</p>
+            <button onclick="startQuiz()">Begin</button>
         </div>
+        <div id="question" class="hidden">
+            <p id="prompt">Question</p>
+            <div id="choices">
+                <div class="choice">
+                    <input type="radio" name="choice" class="choice-input" id="a" value="0">
+                    <label for="a" class="choice-label">Choice 1</label>
+                </div>
 
-        <div id = "one">
-        <input type = "radio" name = "choice" id = "a">
-        <label for = "a">a</label>
-        </div>
+                <div class="choice">
+                    <input type="radio" name="choice" class="choice-input" id="b" value="1">
+                    <label for="b" class="choice-label">Choice 2</label>
+                </div>
 
-        <div id = "one">
-        <input type = "radio" name = "choice" id = "a">
-        <label for = "a">a</label>
-        </div>
+                <div class="choice">
+                    <input type="radio" name="choice" class="choice-input" id="c" value="2">
+                    <label for="c" class="choice-label">Choice 3</label>
+                </div>
 
-        <div id = "one">
-        <input type = "radio" name = "choice" id = "a">
-        <label for = "a">a</label>
+                <div class="choice">
+                    <input type="radio" name="choice" class="choice-input" id="d" value="3">
+                    <label for="d" class="choice-label">Choice 4</label>
+                </div>
+            </div>
+            <button onclick="nextQuestion()">Next Question</button>
         </div>
-    
-    </div>
-    </form>
+        <div id="results" class="hidden">
+            <h2>You finished the quiz!</h2>
+            <p id="result">Results</p>
+            <button onclick="startQuiz()">Retry</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
