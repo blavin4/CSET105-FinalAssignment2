@@ -10,11 +10,13 @@
 
 <body>
     <section class="full-wrap">
+        <div class ="intro-wrap">
         <h1>Quiz</h1>
+        </div>
         <div id="welcome">
             <h2>Welcome to a fun quiz by Gavin and Ann!</h2>
             <p>Press the button to get started.</p>
-            <button onclick="startQuiz()">Begin</button>
+            <button class = "btn" onclick="startQuiz()">Begin</button>
         </div>
         <div id="question" class="hidden">
             <p id="prompt">Question</p>
@@ -39,16 +41,17 @@
                     <label for="d" class="choice-label">Choice 4</label>
                 </div>
             </div>
-            <button onclick="nextQuestion()">Next Question</button>
+            <button class = "btn "onclick="nextQuestion()">Next Question</button>
         </div>
         <div id="results" class="hidden">
             <h2>You finished the quiz!</h2>
             <p id="result">Results</p>
-            <button onclick="startQuiz()">Retry</button>
+            <button class = "btn" onclick="startQuiz()">Retry</button>
         </div>
     </section>
 
     <script src="script.js"></script>
+    </div>
 </body>
 
 </html>
